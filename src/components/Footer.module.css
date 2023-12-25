@@ -1,0 +1,19 @@
+.wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+}
+
+.inputGroup input[type='text'],
+.inputGroup button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

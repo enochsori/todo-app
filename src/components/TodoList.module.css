@@ -1,0 +1,22 @@
+.wrapper {
+  width: 100%;
+  height: 500px;
+
+  border-bottom: 1px solid black;
+}
+
+.todoList {
+  list-style-type: none;
+  padding: 0.5rem 1rem;
+}
+
+.listItem {
+  width: 100%;
+  display: flex;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
+}
+
+.isCompleted {
+  text-decoration: line-through;
+}
