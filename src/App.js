@@ -11,11 +11,9 @@ function App() {
     <DarkModeProvider>
       <TodoListProvider>
         <>
-          <Card>
-            <Header />
-            <TodoList />
-            <Footer />
-          </Card>
+          <Header />
+          <TodoList />
+          <Footer />
         </>
       </TodoListProvider>
     </DarkModeProvider>

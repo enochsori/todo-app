@@ -26,30 +26,38 @@ const TodoList = () => {
   }, [selectedOption, state.todoList]);
 
   return (
-    <div className={styles.wrapper}>
-      <ul className={styles.todoList}>
+    <section className={styles.container}>
+      <ul className={styles.list}>
         {filteredList.map((todo) => (
           <li
             key={todo.id}
             className={`${todo.isCompleted && styles.isCompleted} ${
-              styles.listItem
+              styles.todo
             }`}
           >
-            <div>
-              <input
-                type='checkbox'
-                checked={todo.isCompleted}
-                onChange={() => handleCompleteTodo(todo.id)}
-              />
-              <span>{todo.todo}</span>
-            </div>
-            <button onClick={() => handleRemoveTodo(todo.id)}>
-              <FaRegTrashAlt />
-            </button>
+            <input
+              className={styles.checkbox}
+              type='checkbox'
+              id='checkbox'
+              checked={todo.isCompleted}
+              onChange={() => handleCompleteTodo(todo.id)}
+            />
+            <label htmlFor='checkbox' className={styles.text}>
+              {todo.todo}
+            </label>
+
+            <span className={styles.icon}>
+              <button
+                onClick={() => handleRemoveTodo(todo.id)}
+                className={styles.button}
+              >
+                <FaRegTrashAlt />
+              </button>
+            </span>
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 

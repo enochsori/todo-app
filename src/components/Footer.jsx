@@ -24,19 +24,24 @@ const Footer = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <form onSubmit={handleSubmit} className={styles.inputGroup}>
+    <>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <input
           type='text'
           placeholder='Add Todo'
           value={inputTodo}
           onChange={handleInputChange}
+          className={styles.input}
         />
-        <button type='submit' disabled={inputTodo.trim().length === 0}>
+        <button
+          className={styles.button}
+          type='submit'
+          disabled={inputTodo.trim().length === 0}
+        >
           Add
         </button>
       </form>
-    </div>
+    </>
   );
 };
 

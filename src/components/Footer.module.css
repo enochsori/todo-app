@@ -1,19 +1,31 @@
-.wrapper {
+form {
   width: 100%;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 1.4rem 1rem;
+  background-color: var(--color-bg-dark);
 }
 
-.inputGroup {
-  display: flex;
-  align-items: center;
+.input {
+  flex: 1 0 auto;
+  font-size: 1.4rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  outline: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
-.inputGroup input[type='text'],
-.inputGroup button {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.button {
+  cursor: pointer;
+  background-color: var(--color-accent);
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 0 2rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.button:hover {
+  filter: brightness(125%);
 }
