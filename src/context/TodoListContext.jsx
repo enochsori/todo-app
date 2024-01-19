@@ -1,11 +1,20 @@
-import { createContext, useReducer, useState } from 'react';
+import { createContext, useEffect, useReducer, useState } from 'react';
 
 export const TodoListContext = createContext();
 
-const initialList = { todoList: [] };
-
 export const TodoListProvider = ({ children }) => {
+  // use local storage to save todo list for preserve todo data
+
+  const getTodoFromLocalStorage = () => {
+    console.log('called');
+    const storedTodoList = localStorage.getItem('todo');
+    return storedTodoList ? JSON.parse(storedTodoList) : [];
+  };
+
+  const initialList = { todoList: getTodoFromLocalStorage() };
+
   const handleList = (state, action) => {
+    // reset localStorage
     switch (action.type) {
       case 'add':
         return {
@@ -45,6 +54,10 @@ export const TodoListProvider = ({ children }) => {
   const handleChangeFilter = (filter) => {
     setSelectedOption(filter);
   };
+
+  useEffect(() => {
+    localStorage.setItem('todo', JSON.stringify(state.todoList));
+  }, [state.todoList]);
 
   return (
     <TodoListContext.Provider

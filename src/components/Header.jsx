@@ -2,11 +2,12 @@ import { useContext } from 'react';
 import { MdDarkMode } from 'react-icons/md';
 import { CiLight } from 'react-icons/ci';
 import styles from './Header.module.css';
-import { DarkModeContext } from '../context/DarkModeContext';
+import { useDarkMode } from '../context/DarkModeContext';
 import { TodoListContext } from '../context/TodoListContext';
 
 const Header = () => {
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const { darkMode, toggleDarkMode } = useDarkMode();
+
   const { filterOptions, selectedOption, handleChangeFilter } =
     useContext(TodoListContext);
 
@@ -19,9 +20,9 @@ const Header = () => {
       <div>
         <button className={styles.toggleButton}>
           {darkMode ? (
-            <MdDarkMode onClick={() => toggleDarkMode()} />
+            <MdDarkMode onClick={toggleDarkMode} />
           ) : (
-            <CiLight onClick={() => toggleDarkMode()} />
+            <CiLight onClick={toggleDarkMode} />
           )}
         </button>
       </div>
