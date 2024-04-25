@@ -10,3 +10,22 @@ The React Todo List app is a simple task management application built using Reac
 - Delete Todo: Users can delete a task by clicking the delete button next to each item in the todo list.
 - Dark or Light Mode
 - Filter
+- Using browser storage for saving to-do list in local storage.
+
+### Homepage:
+
+![homepage screenshot](./public/images/home.png)
+
+### Filter complete page:
+
+![Complete todo page screenshot](./public/images/filter-completed.png)
+
+### Filter active page
+
+![Activie todo page item page screenshot](./public/images/filter-active.png)
+
+### Use local storage for
+
+![Local storage screenshot](./public/images/filter-active.png)
+
+---
