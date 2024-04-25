@@ -26,6 +26,6 @@ The React Todo List app is a simple task management application built using Reac
 
 ### Use local storage for
 
-![Local storage screenshot](./public/images/filter-active.png)
+![Local storage screenshot](./public/images/local-storage.png)
 
 ---
