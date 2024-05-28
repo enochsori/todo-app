@@ -49,3 +49,13 @@
   transform: scale(1.1);
   color: var(--color-accent);
 }
+
+.setting {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+}

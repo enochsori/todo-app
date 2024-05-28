@@ -4,6 +4,7 @@ import { CiLight } from 'react-icons/ci';
 import styles from './Header.module.css';
 import { useDarkMode } from '../context/DarkModeContext';
 import { TodoListContext } from '../context/TodoListContext';
+import { VscGithubInverted } from 'react-icons/vsc';
 
 const Header = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
@@ -17,7 +18,7 @@ const Header = () => {
 
   return (
     <div className={styles.header}>
-      <div>
+      <div className={styles.setting}>
         <button className={styles.toggleButton}>
           {darkMode ? (
             <MdDarkMode onClick={toggleDarkMode} />
@@ -25,6 +26,10 @@ const Header = () => {
             <CiLight onClick={toggleDarkMode} />
           )}
         </button>
+
+        <a href='https://github.com/enochsori/todo-app' target='_blank'>
+          <VscGithubInverted />
+        </a>
       </div>
 
       <ul className={styles.filters}>
